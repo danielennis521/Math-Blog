@@ -1,3 +1,3 @@
 # Math-Blog
 
-[test link](https://https://github.com/danielennis521/Math-Blog/Test-Post.md)
+[test link](https://danielennis521.github.io/Math-Blog/Test-Post.md)
