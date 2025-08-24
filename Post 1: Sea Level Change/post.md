@@ -6,6 +6,7 @@ The consequences of sea level rise are serious and deserve consideration. Commer
 
 ## The Data
 For simplicity I'm focused only on the East Coast of the United States. Below is pictured the sea level in millimeters by year at 5 locations.
+![test](https://danielennis521.github.io/Math-Blog/Post%201%3A%20Sea%20Level%20Change/Sea%20Level%20Changes/graphs/basic%20sea%20level.png)
 ![daily sea level](https://github.com/danielennis521/Math-Blog/blob/main/Post%201%3A%20Sea%20Level%20Change/Sea%20Level%20Changes/graphs/basic%20sea%20level.png)
 The ranges are wildly different between locations because they are measured against a fixed reference point at each site. for this reason it's common to graph the "anomoly", that is, the distance from the mean over the whole time series. There are two things we need to deal with to make this data easier to work with. First, we can see outliers that are either a result of error or possibly natural disaster; these point need to be removed so that they dont bias our analyses. Second, we want to average the data by year since the seasonal variability is of no interest for our purposes. 
 
