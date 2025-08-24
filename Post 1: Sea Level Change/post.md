@@ -1,3 +1,7 @@
+layout: page
+title: "Sea Level Rise"
+permalink: https://danielennis521.github.io/Math-Blog/Post%201%3A%20Sea%20Level%20Change/post.md
+
 # A Close Look at Sea Level Rise
 ## Causes and importance
 Anthropogenic climate change has lead to an increase in sea levels during the last century. There are two primary mechanisms for this, the first and more obvious is the melting of glaciers on land putting more water into the ocean, the second is thermal expansion due to the increase in ocean temperatures. I find that people are often surprised by the second mechanism because they think of thermal expansion as a small change, the key thing to remember here is that a change on the order of a few feet is small given that the average depth of the ocean is over 12000 feet! 
