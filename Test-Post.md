@@ -1,6 +1,3 @@
-layout: page
-title: "Sea Level Rise"
-permalink: https://danielennis521.github.io/Math-Blog/Post%201%3A%20Sea%20Level%20Change/post.md
 
 # A Close Look at Sea Level Rise
 ## Causes and importance
