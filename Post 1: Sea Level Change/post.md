@@ -23,11 +23,11 @@ Often times you'll see sea level rise expressed as an average over some time per
 In order to incorporate the whole time series into our estimates we need a more flexible model. The approach will be to fit a polynomial to each dataset and then derive estimates for acceleration and instantaneous rates of change from that model.
 
 ## Non-linear fit and acceleration
-To keep things simple we're fitting a quadratic polynomial to the yearly sea level data, $sea\, level = \beta_0 + \beta_1 \* year + \beta_2 \* year^2$. The fits in the figure below were obtained using the sklearn-learn python library.
+To keep things simple we're fitting a quadratic polynomial to the yearly sea level data, $sea\ level = \beta_0 + \beta_1 \* year + \beta_2 \* year^2$. The fits in the figure below were obtained using the sklearn-learn python library.
 
 ![quadratic fit](https://danielennis521.github.io/Math-Blog/Post%201%3A%20Sea%20Level%20Change/Sea%20Level%20Changes/graphs/quadratic%20regression.png)
 
-From basic calculus we know that $2*beta_2$ is our estimated acceleration in sea level rise. We can therefore test for a significant change in the rate of sea level rise by constructing confidence intervals for $beta_2$. The 95% confidence intervals are summarised in the table below:
+From basic calculus we know that $2 \* \beta_2$ is our estimated acceleration in sea level rise. We can therefore test for a significant change in the rate of sea level rise by constructing confidence intervals for $\beta_2$. The 95% confidence intervals are summarised in the table below:
 
 ![confidence intervals](https://danielennis521.github.io/Math-Blog/Post%201%3A%20Sea%20Level%20Change/Sea%20Level%20Changes/graphs/Confidence%20Intervals.png)
 
