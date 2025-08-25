@@ -23,7 +23,7 @@ Often times you'll see sea level rise expressed as an average over some time per
 In order to incorporate the whole time series into our estimates we need a more flexible model. The approach will be to fit a polynomial to each dataset and then derive estimates for acceleration and instantaneous rates of change from that model.
 
 ## Non-linear fit and acceleration
-To keep things simple we're fitting a quadratic polynomial to the yearly sea level data, "sea level" = ${beta_0} + ${beta_1*year} + ${beta_2*year^2}. The fits in the figure below were obtained using the sklearn-learn python library.
+To keep things simple we're fitting a quadratic polynomial to the yearly sea level data, "sea level" = $beta_0$ + $beta_1*year$ + $beta_2*year^2$. The fits in the figure below were obtained using the sklearn-learn python library.
 
 ![quadratic fit](https://danielennis521.github.io/Math-Blog/Post%201%3A%20Sea%20Level%20Change/Sea%20Level%20Changes/graphs/quadratic%20regression.png)
 
