@@ -33,10 +33,13 @@ From basic calculus we know that $2 \* \beta_2$ is our estimated acceleration in
 
 Each interval contains only positive values making the results consistent with the hypothesis that the rate of sea level rise is increasing (at least along the east coast at the 95% confidence level. Note, that relative to the interval width the lower bound values are well above 0, implying the statement actually holds at much higher confidence levels).  
 
-We now turn our attention to estimating the rate of change at a particular point in time, in particular, we want to try and estimate the current rate of change. 
+We now turn our attention to estimating the rate of change at a particular point in time, in particular, we want to try and estimate the current rate of change. The rate of change at a given time is given by the derivative, $\beta_1 + 2 \* \beta_2 \* year$. Below are the rates of change and the associated confidence intervals,
 
 ![rate of change CIs](https://danielennis521.github.io/Math-Blog/Post%201%3A%20Sea%20Level%20Change/Sea%20Level%20Changes/graphs/rate%20of%20change%20CIs.png)
 
+I want to pause and say a little about the construction of the confidence intervals. The most intuitive way to do this is to simply replace $\beta_1$ and $beta_2$ in our expression with their respective confidence intervals. Unfortunately the resulting interval is in general too wide, that is, it overstates the uncertainty in our estimate. This is due to covariance structure; $\beta_0$, $\beta_1$, and $beta_2$ are not independent of eachother because they are "working together" to fit the data. If we fix the value of $\beta_0$ then we'll have some ranges of plausible values for the others but if we fix $\beta_0$ at another value the ranges for the other parameters will change. 
+
 ## Comparison to Other Analyses
+
 
 ## The Dangers of Extrapolation
