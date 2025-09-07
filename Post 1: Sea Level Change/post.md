@@ -40,6 +40,15 @@ We now turn our attention to estimating the rate of change at a particular point
 I want to pause and say a little about the construction of the confidence intervals. The most intuitive way to do this is to simply replace $\beta_1$ and $beta_2$ in our expression with their respective confidence intervals. Unfortunately the resulting interval is in general too wide, that is, it overstates the uncertainty in our estimate. This is due to covariance structure; $\beta_0$, $\beta_1$, and $beta_2$ are not independent of eachother because they are "working together" to fit the data. If we fix the value of $\beta_0$ then we'll have some ranges of plausible values for the others but if we fix $\beta_0$ at another value the ranges for the other parameters will change. 
 
 ## Comparison to Other Analyses
+An paper published in [nature](https://www.nature.com/articles/s43247-024-01761-5) used satelite data to look at the sea level across the entire globe since 1993; the authors found an acceleration of 0.077 mm/year^2. Below are the accelerations for each of the locations in our analysis,
 
+![Accelerations](https://danielennis521.github.io/Math-Blog/Post%201%3A%20Sea%20Level%20Change/Sea%20Level%20Changes/graphs/Acceleration.png)
+
+While these are obviously much higher than the global average that isn't surprising. Looking at a map of that global satelite data created by [NOAA](https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level) we can see that the sea level change along the US east coast has been changing much faster than much of the rest of the world. It's also worth noting that our analysis started with the 1970s so the different time frames may be affecting the regression analysis. 
 
 ## The Dangers of Extrapolation
+This kind of analysis is very useful for getting us more accurate estimates of how the sea level has been changing. Being able to get a point estimate for the current rate of change is also incredibly valuable for understanding where the sea level will be in the next decade. It is, however, important to keep in mind that it isn't safe to assume this trend will hold forever. This analysis makes no reference to the actually physics involved nor the material realities that will ultimately limit how much the sea level can possibly rise. There's only so much ice that can melt and water can only heat up and undergo thermal expansion. It would be unreasonable to project sea levels out 100 years from now based on this analysis.
+
+## Conclusion
+This acceleration is in sea level rise is deeply concering and has severe implications for life in low-lying coastal areas. Rising sea levels mean it now takes less storm surge to reach further inland, it causes more erosion, it allows storms and waves to pass over natural barriers like coral reefs that traditionally absorb much of the energy before landfall. Analyzing the shifts in sea level rise can help give us a better picture of how our enviornment is changing and what we might expect in the near term.
+
