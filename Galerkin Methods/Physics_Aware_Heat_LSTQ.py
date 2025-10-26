@@ -1,7 +1,10 @@
-
+# Given a set of temperature measurements over time we can compute an
+# approximation of the full temperature distribution. Since du/dt = d^2u/dx^2
+# the time rate of change gives us an estimate of the curvature at that point. 
 
 import numpy as np
 import numpy.linalg as la
+import numpy.polynomial.polynomial as p
 
 
 def heat_matrix(x, n):
@@ -11,6 +14,9 @@ def heat_matrix(x, n):
         A[:, i] *= (i+1)*(i+2)
     
     B[0:, 2:] = A
+    B[0, 0] = 1
+    B[0, 1:] = 0
+    B[-1, :] = 1
     return B
 
 
@@ -35,16 +41,15 @@ def solve(x, y, dt, n):
 
     u = []
     nt = len(y)
-    A = heat_matrix(x, n+1)
+    loci = np.linspace(x[0], x[-1], 50, endpoint=True)
+    #A = heat_matrix(x, n+1)
     B = lstq_matrix(x, n+1)
 
     for i in range(nt-1):
-        c = heat_forcing(x, y[i], y[i+1], dt, n+1)
-        d = lstq_forcing(x, y[i], n+1)
+        #c = heat_forcing(y[i], y[i+1], dt)
+        d = lstq_forcing(y[i])
 
-        print(A)
-        print(c)
-
-        u.append(la.solve(A+B, c+d))
+        coeff = la.lstsq(B, d)[0]
+        u.append(p.polyval(loci, coeff))
 
     return u
