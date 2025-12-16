@@ -40,31 +40,23 @@ def regular_forward_differencing(dx, dy, n, order=(1, 0)):
 def test_forward_differencing(dx, dy, n, order=(1, 0)):
     # dx, dy = interval spacing
     # n = number of points to look in each direction. Total number 
-    #     of points used is thus n*(n+1)//2
+    #     of points used is thus n**2
 
     m = n*(n+1)//2
     x = [dx*i for i in range(n)]
-    y = [dy*i for i in range(n)] 
-    X = np.vander(x, increasing=True, N=n)
-    Y = np.vander(y, increasing=True, N=n)
+    y = [dy*i for i in range(n)]
     A = np.zeros([m, m])
     b = np.zeros([m, 1])
-    print(X)
-    print(Y)
 
+    p = 0
     for i in range(n):
-        for j in range(i):
+        for j in range(n-i):
+            q = 0
             for k in range(n):
-                for l in range(k):
-                    A[j, k+l] = X[,] * Y[]
+                for l in range(k+1):
+                    A[p+j, q+l] = x[j]**(k-l) * y[i]**l * comb(k, l) / factorial(k)
+                q += k+1
 
-    m = order[0] + order[1]
-    b[(m-1)*m//2 + 1] = 1
-
+        p += n-i
     return A
 
-np.set_printoptions(precision=3, suppress=True)
-A = test_forward_differencing(1, 1, 2)
-print(A)
-B = np.linalg.inv(A)
-print(B)
